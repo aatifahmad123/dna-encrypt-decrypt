@@ -66,15 +66,24 @@ int main() {
     
     // Print DNA sequence
     printf("The DNA sequence for your name will be : ");
-    for(int i = 0; i < 27; i++) {
-        for(int k = 0; k < 7; k += 2) {
-            if((binary[i][k] == 0) && (binary[i][k+1] == 0)) {
+    for(int i = 0; i < l; i++) {
+        int index;
+        if(str[i] >= 'A' && str[i] <= 'Z') {
+            index = str[i] - 'A';
+        } else if(str[i] == ' ') {
+            index = 26;
+        } else {
+            continue; // Skip non-alphabetic characters
+        }
+        
+        for(int k = 0; k < 8; k += 2) {
+            if((binary[index][k] == 0) && (binary[index][k+1] == 0)) {
                 printf("T");
-            } else if((binary[i][k] == 1) && (binary[i][k+1] == 1)) {
+            } else if((binary[index][k] == 1) && (binary[index][k+1] == 1)) {
                 printf("A");
-            } else if((binary[i][k] == 0) && (binary[i][k+1] == 1)) {
+            } else if((binary[index][k] == 0) && (binary[index][k+1] == 1)) {
                 printf("C");
-            } else if((binary[i][k] == 1) && (binary[i][k+1] == 0)) {
+            } else if((binary[index][k] == 1) && (binary[index][k+1] == 0)) {
                 printf("G");
             }
         }

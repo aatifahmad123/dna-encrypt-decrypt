@@ -58,9 +58,10 @@ button:hover {
 }
 
 .footer {
-    margin-top: 40px;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
     text-align: center;
     font-size: 0.9em;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
 }
