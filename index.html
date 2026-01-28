@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name to DNA Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Name to DNA Converter</h1>
+    
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    
+    <button onclick="convertToDNA()">Convert</button>
+    
+    <div class="output-section" id="outputSection">
+        <p>Your name is: <span class="output-content" id="uppercaseName"></span></p>
+        
+        <p>The binary code for your name is:<br>
+        <span class="output-content" id="binaryCode"></span></p>
+        
+        <p>The DNA sequence for your name will be:<br>
+        <span class="output-content" id="dnaSequence"></span></p>
+    </div>
+
+    <div class="footer">Made by Aatif Ahmad</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
